@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f2e9" />
+    <title>Mochi Moods | Máquina de estados A*</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Mochi Moods inicio"><span class="brand-mark">✦</span><span><strong>mochi</strong><small>moods / a*</small></span></a>
+        <div class="status-pill"><span class="pulse"></span><span id="system-status">sistema autónomo activo</span></div>
+      </header>
+      <section class="hero" id="top"><div class="hero-copy"><p class="eyebrow">compañero digital · 01</p><h1>Hoy Mochi<br /><em>quiere verte.</em></h1><p class="intro">Cuida sus necesidades, juega con él y descubre cómo cambia su ánimo.</p><div class="hero-meta"><span><i class="dot dot-coral"></i> 7 estados de ánimo</span><span><i class="dot dot-green"></i> comportamiento autónomo</span></div></div><div class="hero-sticker" aria-hidden="true"><span>mood<br />room</span><strong>✺</strong></div></section>
+      <section class="dashboard">
+        <div class="pet-room panel"><div class="room-heading"><div><p class="eyebrow">habitación de Mochi</p><h2>Tu compañero está aquí</h2></div><span class="room-light">● conectado</span></div><div class="pet-scene"><span class="spark spark-one">✦</span><span class="spark spark-two">✧</span><span class="speech-bubble" id="speech-bubble">¡Hola!</span><div class="mood-face" id="mood-face"><span class="face-ears"></span><span class="face-eyes"></span><span class="face-mouth"></span><i class="blush blush-left"></i><i class="blush blush-right"></i><span class="face-belly"></span></div><div class="pet-shadow"></div></div><div class="room-floor"><span>haz clic en un mood para cambiar su actitud</span><span class="mono">estado <b id="room-state">01</b></span></div></div>
+        <aside class="side-column"><div class="mood-card panel"><div class="card-topline"><p class="eyebrow">estado actual</p><span class="state-number" id="state-number">01</span></div><h2 id="state-name">Explorando</h2><p id="state-description">Mochi busca algo nuevo que descubrir.</p><div class="next-state"><span>cambio automático en</span><strong id="countdown">06s</strong></div></div><div class="needs-card panel"><div class="card-topline"><p class="eyebrow">necesidades</p><span class="live-label">LIVE</span></div><div class="meter-row"><div><span>energía</span><b id="energy-value">78%</b></div><div class="meter"><i id="energy-meter" style="width:78%"></i></div></div><div class="meter-row"><div><span>ánimo</span><b id="mood-value">84%</b></div><div class="meter"><i id="mood-meter" style="width:84%"></i></div></div><div class="meter-row"><div><span>curiosidad</span><b id="curiosity-value">66%</b></div><div class="meter"><i id="curiosity-meter" style="width:66%"></i></div></div></div></aside>
+      </section>
+      <section class="route-panel panel"><div class="panel-heading"><div><p class="eyebrow">movimiento inteligente / A*</p><h2>El jardín de Mochi</h2></div><div class="map-legend"><span><i class="legend-dot pet-dot"></i>Mochi</span><span><i class="legend-dot goal-dot"></i>meta</span><span><i class="legend-dot path-dot"></i>ruta</span></div></div><div class="map-wrap"><div id="map" class="map" role="grid" aria-label="Mapa de movimiento de Mochi"></div><div class="map-caption"><span id="route-label">esperando una decisión...</span><span class="mono" id="step-counter">paso 01 / 12</span></div></div></section>
+      <section class="control-section"><div class="section-heading"><div><p class="eyebrow">control directo</p><h2>Elige su próximo mood</h2></div><p class="hint">El ciclo autónomo retomará el control<br />después de una pequeña pausa.</p></div><div class="state-grid" id="state-controls"></div></section>
+      <section class="activity panel"><div class="section-heading"><div><p class="eyebrow">telemetría</p><h2>Diario de actividad</h2></div><button class="text-button" id="clear-log" type="button">limpiar registro <span>↗</span></button></div><div id="activity-log" class="activity-log" aria-live="polite"></div></section>
+      <footer><span>MOCHI MOODS / LAB 01</span><span>una mascota, siete maneras de estar</span></footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
